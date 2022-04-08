@@ -14,12 +14,12 @@ html::-webkit-scrollbar{
 
 html::-webkit-scrollbar-thumb{
     background: rgba(128, 128, 128, 0.788);
-    border-radius: .1rem;
+    border-radius: .3rem;
 }
 
 :root{
     --primary:rgb(54, 165, 150);
-    --secondary:yellow;
+    --secondary:#a14acc;
 }
 
 /* End of default styling */
@@ -51,6 +51,14 @@ nav .logo{
     font-size: 1.4rem;
     font-weight: 500;
     color: #fff;
+    border: 2px solid #fff;
+    padding:  0 .5rem;
+}
+
+nav .logo .purple{
+    color: var(--secondary);
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li a{
@@ -60,7 +68,11 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: blue;
+    color: #a14acc;
+}
+
+.bars{
+    display: none;
 }
 
 /* End of styling for Nav */
@@ -71,14 +83,33 @@ nav ul li a:hover{
     width: 100%;
     position: relative;
     height: calc(100vh - 4rem);
-    min-height: 650PX;
-    background: lightgray;
-    padding: 10rem 10% 0;
+    min-height: 720PX;
+    background: #fff;
+    padding: 5rem 3% 2rem;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
 }
+
+#home .homeimage{
+    max-width: 100vw;
+}
+
+#home .info{
+    margin-top: 7rem;
+}
+
+#home .homeimage img{
+    width: 100%;
+    height: auto;
+}
+
+
 
 #home h1{
     font-size: 2.9rem;
-    color: #fff;
+    color: gray;
     font-weight: 300;
     margin-bottom: .75rem;
 }
@@ -90,7 +121,7 @@ nav ul li a:hover{
     font-size: 1.45rem;
 }
 
-#home button{
+#home .button{
     padding: .6rem 1rem;
     border: none;
     outline: none;
@@ -100,27 +131,23 @@ nav ul li a:hover{
     border-radius: .3rem;
     cursor: pointer;
     transition: all .4s;
+    box-sizing: content-box;
+    border: 1px solid var(--primary);
+    text-decoration: none;
+    font-size: .9rem;
+    display: inline-block;
 }
 
-#home button:hover{
+#home .button:hover{
     background: #fff;
     color: var(--primary);
+    border: 1px solid var(--primary);
 }
 
-.button2{
+#home .button:nth-of-type(2){
     margin-left: 1rem;
-    color: var(--primary) !important;
-    background: #fff !important;
-    box-sizing: content-box;
-    border: 1px solid var(--primary) !important;
 }
 
-.button2:hover{
-    background: var(--primary) !important;
-    color: #fff !important;
-    border: 1px solid #fff !important;
-
-}
 /* End of  Styling for Home */
 
 
@@ -228,6 +255,7 @@ nav ul li a:hover{
     padding: 1.5rem;
     transition: all .4s;
     position: relative;
+    cursor: pointer;
 }
 
 .service:hover{
@@ -243,7 +271,6 @@ nav ul li a:hover{
     text-align: center;
     font-size: .92rem;
     color: gray;
-    cursor: pointer;
 }
 /* End of Style for Services */
 
@@ -264,11 +291,57 @@ footer .copy{
 
 
 
+
+
 /*End of  Styling for footer */
+
+
+/* Style of slider */
+
+.slider{
+    position: fixed;
+    width: 400px;
+    max-width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.937);
+    z-index: 5;
+    display: none;
+    right: 0;
+    transition: all .5s;
+}
+
+.slider ul{
+    list-style: none;
+    margin-left: 5%;
+    height: 50%;
+    /* background: red; */
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    top: 30%;
+    transform: translateY(-50%);
+    padding: 0 2rem;
+}
+
+.slider ul li a{
+    text-decoration: none;
+    color: grey;
+}
+
+.open{
+    right: -100%;
+}
+/* End of Style of slider */
 
 /* Media queries */
 
 @media (max-width:1080px) {
+
+    .slider{
+        display: block;
+    }
 
     nav ul{
         display: none;
@@ -280,6 +353,43 @@ footer .copy{
 
     .container{
         grid-template-columns: repeat(2,1fr);
+    }
+
+    .bars{
+        display: block;
+        width: 25px;
+        height: 22px;
+        /* background: red; */
+        position: relative;
+    }
+
+    .bars .bar{
+        width: 100%;
+        position: relative;
+        height: 3px;
+        background: #fff;
+        border-radius: 2px;
+    }
+
+    .bars .bar::before{
+        content: '';
+        width: 90%;
+        position: absolute;
+        height: 3px;
+        background: #fff;
+        top: .5rem;
+        right: 0;
+        border-radius: 2px;
+    }
+
+    .bars .bar::after{
+        content: '';
+        width: 100%;
+        position: absolute;
+        height: 3px;
+        background: #fff;
+        top: 1rem;
+        border-radius: 2px;
     }
     
 }
@@ -298,6 +408,15 @@ footer .copy{
     #home h3{
         font-size: 1.25rem;
     }
+
+    #home{
+        padding: 5rem 5% 0;
+    }
+
+    #home .info{
+        margin-top: 2rem;
+    }
+    
     
 }
 

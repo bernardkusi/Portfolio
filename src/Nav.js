@@ -1,11 +1,11 @@
-import React from 'react';
 
 
-const Nav=()=>{
 
+const Nav=(props)=>{
+    
     return(
         <nav>
-            <a href="#" className="logo">Intern Aid</a>
+            <a href="#" className="logo"> <span>B</span > <span className='purple'>K</span> <span>D</span> </a>
 
             <ul>
                 <li><a href="#">Home</a></li>
@@ -15,6 +15,10 @@ const Nav=()=>{
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Contact Me</a></li>
             </ul>
+
+            <div className="bars" onClick={props.open}>
+                <div className="bar"></div>
+            </div>
         </nav>
     )
     
