@@ -24,7 +24,8 @@ const Skills=()=>{
         {skillname:'Django'},
         {skillname:'GIT/GitHub'},
         {skillname:'Photoshop'},
-        {skillname:'OOP'}
+        {skillname:'OOP'},
+        {skillname:'SASS'},
     ];
 
     return(

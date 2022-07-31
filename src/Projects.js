@@ -1,10 +1,36 @@
 import React from "react";
+import Project from "./Project";
 
 
-const Projects = ()=>{
+const Projects = ({dark})=>{
     return(
-        <div>
-            <p className="heading">Take A Look At Some Of My Personal Projects</p>
+        <div id="projects">
+            <p className="heading">View My Projects</p>
+            <div className="projects_grid">
+                
+                <Project dark={dark}>
+                <img src={require(`./portfolio.png`)} alt="portfolio_image" />
+                </Project>
+
+                
+                <Project dark={dark}>
+                <img src={require(`./portfolio.png`)} alt="portfolio_image" />
+                </Project>
+
+                <Project dark={dark}>
+                <img src={require(`./portfolio.png`)} alt="portfolio_image" />
+                </Project>
+
+                <Project dark={dark}>
+                <img src={require(`./portfolio.png`)} alt="portfolio_image" />
+                </Project>
+
+                <Project dark={dark}>
+                <img src={require(`./portfolio.png`)} alt="portfolio_image" />
+                </Project>
+
+
+            </div>
         </div>
     )
 }

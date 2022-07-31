@@ -1,5 +1,6 @@
 import React,{  useState} from 'react';
 import About from './About.js';
+import Contact from './Contact.js';
 import Footer from './Footer.js';
 import Home from './Home.js';
 import Nav from './Nav.js';
@@ -12,21 +13,26 @@ import Slider from './Slider.js';
 function App() {
 
   const [open,setopen]=useState(true);
-
+  const[dark,setdark]=useState(true);
   const opennav=()=>{
       setopen(prev=>!prev);
   }
 
+  const toogleTheme=()=>{
+    setdark(prev=>!prev);
+  }
+
   return (
-    <div className="App">
-    <Nav open={opennav}/>
-    <Slider isopen={open}/>
+    <div className={[dark?"dark App":"App"]}>
+    <Nav open={opennav} dark={dark} toggle={toogleTheme}/>
+    <Slider isopen={open} dark={dark}/>
     <Home/>
     <About/>
     <Skills/>
     <Services/>
-    <Projects/>
-    <Footer/>
+    <Projects dark={dark}/>
+    <Contact/>
+    <Footer  dark={dark}/>
     
     </div>
     
