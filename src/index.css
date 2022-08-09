@@ -446,10 +446,9 @@ body .App.dark  .servicetext{
 }
 
 .project .image{
-    height: 220px;
-    background: lightgray;
+    height: auto;
+    /* background: lightgray; */
     position: relative;
-    overflow: hidden;
     border-radius: .3rem;
 }
 
@@ -535,9 +534,6 @@ body .App.dark  .servicetext{
 
 .project img{
     width: 100%;
-    height:auto;
-    object-fit: cover;
-    object-position: top;
     transition: all .4s ease;
 }
 
@@ -723,7 +719,7 @@ footer.dark .copy{
     transition: all .4s;
     font-size: 2rem;
     text-align: center;
-    color: lighten(#a14acc,10%);
+    color: rgb(54, 165, 150);
 }
 
 .links a:hover{
