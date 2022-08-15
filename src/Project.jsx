@@ -5,7 +5,7 @@ import {useEffect} from 'react';
 
 
 
-const Project=({children,dark})=>{
+const Project=({children,dark,project})=>{
 
     useEffect(() => {
         AOS.init();
@@ -15,10 +15,10 @@ const Project=({children,dark})=>{
     return(
         <div className={[dark?"dark ":""," project"]} data-aos="zoom-in-up">
             <div className="image">
-                <a  href='#' className="git"></a>
+                <a  href={`http//${project.link}`}  target="_blank" rel="noopener noreferrer" className="git"></a>
                 {children}
                 </div>
-            <a href='#' className="view">Live Preview</a>
+                <a  href={`http//${project.link}`}  target="_blank" className="view">Live Prview</a>
         </div>
     )
 }

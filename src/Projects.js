@@ -3,16 +3,28 @@ import Project from "./Project";
 
 
 const Projects = ({dark})=>{
+    const projects=[
+
+        {name:"PrimeFurniture",link:"primefurniture.netlify.app",image:"primefurniture.png"},
+        {name:"PrimeClean",link:"/",image:"primeclean.png"},
+        {name:"PrimeBoutique",link:"/",image:"primeboutique.png"},
+        {name:"PrimeGuestHouse",link:"primeguesthouse.vercel.app",image:"primeguesthouse.png"},
+        {name:"PrimeEstate",link:"primeestate.netlifyapp",image:"primeestate.png"},
+        {name:"TastyFood",link:"tastyfood.infinityfreeapp.com",image:"tastyfood.png"},
+    ]
     return(
         <div id="projects">
             <p className="heading">View My Projects</p>
             <div className="projects_grid">
+                {projects.map((project,index)=>{return(
+                    <Project dark={dark} key={index} project={project}>
+                    <img src={require(`./${project.image}`)} alt={project.name} />
+                    </Project>)
+                })}
 
-                <Project dark={dark}>
-                <img src={require(`./primefurniture.png`)} alt="portfolio_image" />
-                </Project>
                 
-                <Project dark={dark}>
+                
+                {/* <Project dark={dark}>
                 <img src={require(`./primeclean.png`)} alt="portfolio_image" />
                 </Project>
 
@@ -26,7 +38,7 @@ const Projects = ({dark})=>{
 
                 <Project dark={dark}>
                 <img src={require(`./tastyfood.png`)} alt="portfolio_image" />
-                </Project>
+                </Project> */}
 
 
             </div>
