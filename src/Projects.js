@@ -7,8 +7,10 @@ const Projects = ({dark})=>{
 
         {name:"PrimeFurniture",link:"primefurniture.netlify.app",image:"primefurniture.png"},
         {name:"PrimeClean",link:"/",image:"primeclean.png"},
+        {name:"SweetMeals",link:"/",image:"sweetmeals.png"},
         {name:"PrimeBoutique",link:"/",image:"primeboutique.png"},
         {name:"PrimeGuestHouse",link:"primeguesthouse.vercel.app",image:"primeguesthouse.png"},
+        {name:"PrimeBeautyHub",link:"primebeautyhub.vercel.app",image:"primebeautyhub.png"},
         {name:"PrimeEstate",link:"primeestate.netlifyapp",image:"primeestate.png"},
         {name:"TastyFood",link:"tastyfood.infinityfreeapp.com",image:"tastyfood.png"},
     ]

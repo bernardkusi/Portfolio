@@ -256,6 +256,7 @@ body .App.dark .heading{
 
 .about{
     display: flex;
+    flex-direction: row-reverse;
     gap: 2rem;
     padding: 0 5%;
     padding-top: 0;
@@ -840,7 +841,7 @@ footer ul li a:hover{
     }
 
     .about{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .container{
