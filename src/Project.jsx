@@ -15,10 +15,10 @@ const Project=({children,dark,project})=>{
     return(
         <div className={[dark?"dark ":""," project"]} data-aos="zoom-in-up">
             <div className="image">
-                <a  href={`http//${project.link}`}  target="_blank" rel="noopener noreferrer" className="git"></a>
+                <a  href={`http://${project.link}`}  target="_blank" rel="noopener noreferrer" className="git"></a>
                 {children}
                 </div>
-                <a  href={`http//${project.link}`}  target="_blank" className="view">Live Prview</a>
+                <a  href={`http://${project.link}`}  target="_blank" className="view">Live Prview</a>
         </div>
     )
 }
