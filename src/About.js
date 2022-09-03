@@ -24,7 +24,9 @@ const About = () => {
           technologies including PHP, python, Mysql and Postgress and frameworks
           such as Laravel and Django.
         </p>
-        <div className="aboutimage"  data-aos-duration="600" data-aos="fade-left"></div>
+        <div className="aboutimage"  data-aos-duration="600" data-aos="fade-left">
+        <img src={require("./about.jpg")} alt="aboutimage"/>
+        </div>
       </div>
     </div>
   );

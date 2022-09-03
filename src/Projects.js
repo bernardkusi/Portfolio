@@ -11,7 +11,7 @@ const Projects = ({dark})=>{
         {name:"PrimeBoutique",link:"/",image:"primeboutique.png"},
         {name:"PrimeGuestHouse",link:"primeguesthouse.vercel.app",image:"primeguesthouse.png"},
         {name:"PrimeBeautyHub",link:"primebeautyhub.vercel.app",image:"primebeautyhub.png"},
-        {name:"PrimeEstate",link:"primeestate.netlifyapp",image:"primeestate.png"},
+        {name:"PrimeEstate",link:"primeestate.netlify.app",image:"primeestate.png"},
         {name:"TastyFood",link:"tastyfood.infinityfreeapp.com",image:"tastyfood.png"},
     ]
     return(

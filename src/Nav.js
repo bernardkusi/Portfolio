@@ -19,6 +19,7 @@ const Nav=({open,dark,toggle})=>{
             <a href="#" className="logo"> <span>B</span > <span className='purple'>K</span> <span>D</span> </a>
 
             <ul>
+                <li><a href="https://digital-cv-sigma.vercel.app/"> View&nbsp;CV</a></li>
                 <li><a href="#"> Home</a></li>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#skills"> My Skills</a></li>
