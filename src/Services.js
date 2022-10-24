@@ -34,6 +34,10 @@ const Services=()=>{
                <img src={require(`./webdesign.png`)} alt="backend-image" />
                 <p className="servicetext">Web Designing</p>
                 </div>
+               <div className="service"  data-aos="flip-up" data-aos-duration="1000">
+               <img src={require(`./mobileapp.png`)} alt="mobileapp-image" />
+                <p className="servicetext">Mobile App Development</p>
+                </div>
            </div>
         </div>
     )
