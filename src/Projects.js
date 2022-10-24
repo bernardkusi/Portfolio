@@ -4,7 +4,6 @@ import Project from "./Project";
 
 const Projects = ({dark})=>{
     const projects=[
-        
         {name:"Snackbar",link:"snackbar-gamma.vercel.app",image:"snackbar.png"},
         {name:"primeelectricals",link:"primeelectricals.vercel.app",image:"primeelectricals.png"},
         {name:"PrimeFurniture",link:"primefurniture.netlify.app",image:"primefurniture.png"},

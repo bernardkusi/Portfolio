@@ -5,15 +5,17 @@ const Skills=()=>{
 //Core skill list to map through 
     const skill_list=[
         {skillname:'HTML'},
-        {skillname:'CSS'},
+        {skillname:'SASS(CSS)'},
         {skillname:'Javascript'},
+        {skillname:'Typescript'},
         {skillname:'Bootstrap'},
         {skillname:'TailwindCSS'},
         {skillname:'ReactJS'},
         {skillname:'SQL'},
         {skillname:'PostgreSQL'},
         {skillname:'PHP'},
-        {skillname:'Laravel'}
+        {skillname:'Laravel'},
+        {skillname:'UI/UX Design(Figma)'}
     ];
 
 // Other skills list to map through
@@ -26,6 +28,9 @@ const Skills=()=>{
         {skillname:'Photoshop'},
         {skillname:'OOP'},
         {skillname:'SASS'},
+        {skillname:'Nextjs'},
+        {skillname:'ReactNative'},
+        {skillname:'Progressive Web Apps'},
     ];
 
     return(
