@@ -19,6 +19,7 @@ const Projects = ({dark})=>{
     return(
         <div id="projects">
             <p className="heading">View My Projects</p>
+            <p className="skillhead">Web development</p>
             <div className="projects_grid">
                 {projects.map((project,index)=>{return(
                     <Project dark={dark} key={index} project={project}>
@@ -26,25 +27,21 @@ const Projects = ({dark})=>{
                     </Project>)
                 })}
 
+            </div>
+
+            <p className="skillhead">Ui/Ux Design projects</p>
+            <div className="figmagrid">
+                <a href="http://www.figma.com/proto/Awsfej05FWmEwItPism2JY/Untitled?node-id=3%3A47&scaling=scale-down&page-id=0%3A1&starting-point-node-id=31%3A138" target="_blank" rel="noopener noreferrer">
+                <div className="image">
+                <img src={require(`./falaa.png`)} alt="falaa image" />
+                </div>
+                </a>
                 
-                
-                {/* <Project dark={dark}>
-                <img src={require(`./primeclean.png`)} alt="portfolio_image" />
-                </Project>
-
-                <Project dark={dark}>
-                <img src={require(`./primeguesthouse.png`)} alt="portfolio_image" />
-                </Project>
-
-                <Project dark={dark}>
-                <img src={require(`./primeestate.png`)} alt="portfolio_image" />
-                </Project>
-
-                <Project dark={dark}>
-                <img src={require(`./tastyfood.png`)} alt="portfolio_image" />
-                </Project> */}
-
-
+                <a href="https://www.figma.com/proto/8M5i92D9pPEbcM54VBynUk/Untitled?node-id=16%3A731&scaling=scale-down&page-id=0%3A1&starting-point-node-id=9%3A2" target="_blank" rel="noopener noreferrer">
+                <div className="image">
+                <img src={require(`./donkomi.png`)} alt="donkomi image" />
+                </div>
+                </a>
             </div>
         </div>
     )
