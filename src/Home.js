@@ -14,7 +14,7 @@ const Home=()=>{
         <div id="home">
             <div className="info" data-aos="fade-down" data-aos-duration="1000">
             <h1>Bernard Kusi Dwumfour</h1>
-            <h3>Hi ,Im  a FullStack Web Developer / Graphic Designer </h3>
+            <h3>Hi ,Im  a FullStack Web Developer, (UI/UX) Designer and Graphic Designer </h3>
             <p>Feel free to Look around and hit me up if you need any of my services.</p>
             <a href="./Resume.pdf" className="button">Download My CV</a>
             <a href="tel:+233592724408" className="button">Hire Me</a>

@@ -177,7 +177,8 @@ body .App.dark #home{
 }
 
 #home .info{
-    margin-top: 7rem;
+    margin-top: 5rem;
+    max-width: 700px;
 }
 
 #home .homeimage img{
@@ -548,6 +549,7 @@ body .App.dark  .servicetext{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     position: relative;
+    align-items: center;
     left: 50%;
     transform: translateX(-50%);
     justify-content: center;
@@ -556,19 +558,19 @@ body .App.dark  .servicetext{
     padding: 4rem 2rem;
 
 }
-.figmagrid>div{
+.figmagrid div{
     background: lightgray;
     height: calc(200px + 20vw);
     max-height: 500px;
     position: relative;
   }
 
-  .figmagrid>div img{
+  .figmagrid div img{
     width:100%;
-    height: 100% !important;
+    height: 100%;
     object-fit: cover;
     object-position: center;
-
+    /* display: none; */
 }
 
 
@@ -631,7 +633,7 @@ body .App.dark  .form{
 
 .form .formcontrol{
     width: 100%;
-    padding: .65rem 1rem 0;
+    padding: .65rem 1rem 1rem;
     position: relative;
 }
 .form .formcontrol input{
@@ -936,6 +938,7 @@ footer ul li a:hover{
         display: grid;
         grid-template-columns: repeat(1,1fr);
         /* grid-auto-rows: 240px; */
+        padding: 4rem 1rem;
     }
 
     .container{
