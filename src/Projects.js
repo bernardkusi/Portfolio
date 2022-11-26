@@ -42,6 +42,12 @@ const Projects = ({dark})=>{
                 <img src={require(`./donkomi.png`)} alt="donkomi image" />
                 </div>
                 </a>
+
+                <a href="https://www.figma.com/proto/8M5i92D9pPEbcM54VBynUk/Untitled?node-id=16%3A731&scaling=scale-down&page-id=0%3A1&starting-point-node-id=9%3A2" target="_blank" rel="noopener noreferrer">
+                <div className="image">
+                <img src={require(`./sweetmeals (2).png`)} alt="sweetmeals image" />
+                </div>
+                </a>
             </div>
         </div>
     )
