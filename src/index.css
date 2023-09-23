@@ -47,20 +47,25 @@ nav{
     width: 100%;
     height: 4rem;
     background: var(--primary);
-    background: #fff;
+    background: transparent;
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
     align-items: flex-end;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 10;
     transition: all .4s;
     padding-right: 9rem;
 }
 
+
+nav.active{
+    background: #fff;
+}
+
 nav.dark{
-    background: rgb(1, 77, 69);
+    background: transparent;
 }
 
 nav.dark.active{
@@ -157,14 +162,13 @@ nav ul li a:hover{
 #home{
     width: 100%;
     position: relative;
-    height: calc(100vh - 4rem);
-    min-height: 620PX;
+    height: calc(100vh);
+    /* max-height: 620PX; */
     background: #fff;
-    padding: 5rem 3% 2rem;
+    padding: 8rem 3% 3rem;
     display: flex;
-    /* align-items: flex-start; */
-    /* flex-wrap: wrap-reverse; */
     justify-content: center;
+    overflow: hidden;
 }
 
 body .App.dark #home{
@@ -173,12 +177,69 @@ body .App.dark #home{
 
 #home .homeimage{
     max-width: 100vw;
-    align-self: flex-start
+    align-self: flex-start;
+    position: relative;
+    
 }
+
+/* #home .homeimage::before{
+    content: "";
+    background: var(--secondary);
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    z-index: -1;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+} */
 
 #home .info{
     margin-top: 5rem;
     max-width: 700px;
+    position: relative;
+}
+
+@keyframes circle {
+    0%{
+        transform: translateY(-1.5rem);
+    }
+
+    100%{
+        transform: translateY(1.5rem);
+    }
+    
+}
+
+ #home .div2{
+    /* content: ""; */
+    width: 550px;
+    height: 550px;
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(42, 153, 201, 0.434);
+    z-index: -1;
+    bottom: -7rem;
+    left: -10rem;
+    animation: circle  ease-in-out 5s 2s infinite alternate-reverse;
+}
+
+#home .div1{
+    /* content: ""; */
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(42, 153, 201, 0.434);
+    z-index: -1;
+    top: -15rem;
+    right: 0rem;
+    animation: circle ease-in-out 5s infinite alternate-reverse;
+}
+
+ .dark #home .div2,.dark #home .div1{
+    background: rgba(0, 103, 110, 0.591);
 }
 
 #home .homeimage img{
@@ -269,10 +330,11 @@ body .App.dark .heading{
     align-items: center;
     justify-content: space-evenly;
     overflow: hidden;
+    padding-bottom: 2rem;
 }
 
 .abouttext{
-    font-size: 1.07rem;
+    font-size: 1.02rem;
     max-width: 32rem;
     line-height: 160%;
     color: rgb(100, 100, 100);
@@ -285,12 +347,12 @@ body .App.dark .abouttext{
 
 .aboutimage{
     background: lightgrey;
-    height: 25rem;
+    height: 24rem;
     width: 32rem;
     max-width: 92vw;
     margin-top: 1.5rem;
-    outline: 3px solid #a14acc;
-    outline-offset: .6rem;
+    outline: 7px solid #a14acc;
+    outline-offset: .3rem;
 }
 
 /* End of Styling For about */
@@ -324,6 +386,13 @@ body .App.dark .abouttext{
     text-align: center;
     overflow: hidden;
 
+}
+
+.skill .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
 }
 
 body .App.dark  .skill{
@@ -548,7 +617,7 @@ body .App.dark  .servicetext{
 
 .figmagrid{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
     position: relative;
     align-items: center;
     left: 50%;
@@ -561,8 +630,8 @@ body .App.dark  .servicetext{
 }
 .figmagrid div{
     background: lightgray;
-    height: calc(200px + 20vw);
-    max-height: 500px;
+    height: calc(130px + 20vw);
+    max-height: 300px;
     position: relative;
   }
 
@@ -654,6 +723,7 @@ body .App.dark  .form{
     resize: none;
     border-radius: .3rem;
     transition: all .4s;
+    height: 8rem;
 }
 
 
@@ -865,7 +935,7 @@ footer ul li a:hover{
 
     #home{
         flex-wrap: wrap-reverse;
-        padding: 0rem 2% 0;
+        padding: 0rem 2% 3rem;
     }
 
 
@@ -932,6 +1002,12 @@ footer ul li a:hover{
     
 }
 
+@media (max-width:850px) {
+.figmagrid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+}
 
 @media (max-width:650px) {
 
@@ -939,7 +1015,13 @@ footer ul li a:hover{
         display: grid;
         grid-template-columns: repeat(1,1fr);
         /* grid-auto-rows: 240px; */
-        padding: 4rem 1rem;
+        padding: 3rem 1rem;
+        min-height: 400px;
+        
+    }
+
+    .figmagrid div{
+       min-height: 350px;
     }
 
     .container{
@@ -955,11 +1037,25 @@ footer ul li a:hover{
     }
 
     #home{
-        padding: 0rem 2% 0;
+        padding: 0rem 2% 3rem;
     }
 
     #home .info{
         margin-top: 2rem;
+    }
+
+    .abouttext{
+        font-size: .85rem;
+    }
+
+    #home .info .div1{
+        top: -30rem;
+        right: 0rem;
+    }
+
+    #home .info .div2{
+        width: 450px;
+        height: 450px;
     }
     
     

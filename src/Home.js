@@ -13,6 +13,8 @@ const Home=()=>{
     return(
         <div id="home">
             <div className="info" data-aos="fade-down" data-aos-duration="1000">
+            <div className="div1"></div>
+            <div className="div2"></div>
             <h1>Bernard Kusi Dwumfour</h1>
             <h3>Hi ,Im  a FullStack Web Developer, (UI/UX) Designer and Graphic Designer </h3>
             <p>Feel free to Look around and hit me up if you need any of my services.</p>
