@@ -1,5 +1,5 @@
 import React from 'react';
-import Skill from './Skill.js'
+import Skill from '../components/Skill.js';
 
 const Skills=()=>{
 //Core skill list to map through 

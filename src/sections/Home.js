@@ -23,7 +23,7 @@ const Home=()=>{
             </div>
 
             <div className="homeimage" data-aos="fade-up" data-aos-duration="1000">
-                <img src={require(`./homeimage.png`)} alt="image" />
+                <img src={require(`../images/homeimage.png`)} alt="homeimage" />
             </div>
             
         </div>

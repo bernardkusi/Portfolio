@@ -631,7 +631,7 @@ body .App.dark  .servicetext{
 .figmagrid div{
     background: lightgray;
     height: calc(130px + 20vw);
-    max-height: 300px;
+    max-height: 250px;
     position: relative;
   }
 
