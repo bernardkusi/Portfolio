@@ -8,9 +8,6 @@ const Projects = ({ dark }) => {
         { name: "primeelectricals", link: "primeelectricals.vercel.app", image: "primeelectricals.png" },
         { name: "primehotel", link: "hoteldeprime.vercel.app", image: "primehotel.png" },
         { name: "PrimeFurniture", link: "primefurniture.netlify.app", image: "primefurniture.png" },
-        // {name:"PrimeClean",link:"/",image:"primeclean.png"},
-        // {name:"SweetMeals",link:"/",image:"sweetmeals.png"},
-        // {name:"PrimeBoutique",link:"/",image:"primeboutique.png"},
         { name: "PrimeGuestHouse", link: "primeguesthouse.vercel.app", image: "primeguesthouse.png" },
         { name: "PrimeBeautyHub", link: "primebeautyhub.vercel.app", image: "primebeautyhub.png" },
         { name: "PrimeEstate", link: "primeestate.netlify.app", image: "primeestate.png" },
@@ -32,6 +29,11 @@ const Projects = ({ dark }) => {
 
             <p className="skillhead">Ui/Ux Design projects</p>
             <div className="figmagrid">
+                <a href="https://www.figma.com/file/Te914L3OTQXb2E9JQtK1zV/Untitled?type=design&node-id=65%3A157&mode=design&t=DdfKnhW8It0BPdvz-1" target="_blank" rel="noopener noreferrer">
+                    <div className="image">
+                        <img src={require(`../images/furnichar.png`)} alt="falaa" />
+                    </div>
+                </a>
                 <a href="https://www.figma.com/file/FxLv42zdfZ3pcXEy4rUykK/Untitled?type=design&mode=design&t=lBBXY0Twbor8ipBF-1" target="_blank" rel="noopener noreferrer">
                     <div className="image">
                         <img src={require(`../images/car_dealership_ui.png`)} alt="falaa" />
@@ -40,7 +42,7 @@ const Projects = ({ dark }) => {
 
                 <a href="https://www.figma.com/file/wsOn762x0tnF0J5EEFub48/Untitled?type=design&mode=design&t=lBBXY0Twbor8ipBF-1" target="_blank" rel="noopener noreferrer">
                     <div className="image">
-                        <img src={require(`../images/construction_website_ui.png`)} alt="falaa" />
+                        <img src={require(`../images/construction.png`)} alt="falaa" />
                     </div>
                 </a>
 

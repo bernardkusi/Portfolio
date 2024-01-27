@@ -18,7 +18,7 @@ const Project=({children,dark,project})=>{
                 <a  href={`http://${project.link}`}  target="_blank" rel="noopener noreferrer" className="git"></a>
                 {children}
                 </div>
-                <a  href={`http://${project.link}`}  target="_blank" className="view">Live Prview</a>
+                <a  href={`http://${project.link}`}  target="_blank" className="view">Live Preview</a>
         </div>
     )
 }

@@ -22,6 +22,8 @@ img{
 
 body .App.dark{
     background: rgb(0, 56, 50);
+    background: rgb(1, 77, 69);
+
 }
 
 html::-webkit-scrollbar{
@@ -61,7 +63,8 @@ nav{
 
 
 nav.active{
-    background: #fff;
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid var(--secondary);
 }
 
 nav.dark{
@@ -69,12 +72,14 @@ nav.dark{
 }
 
 nav.dark.active{
-    background: rgb(0, 56, 50);
+    background: rgba(0, 56, 50, 0.8);
     box-shadow: 0 0 7px rgba(7, 7, 7, 0.19);
+    border-bottom: 2px solid var(--secondary);
 }
 
 .active{
     box-shadow: 0 0 7px rgba(7, 7, 7, 0.19);
+    backdrop-filter: blur(10px);
 }
 
 nav .toggler{
@@ -168,11 +173,12 @@ nav ul li a:hover{
     padding: 8rem 3% 3rem;
     display: flex;
     justify-content: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 body .App.dark #home{
     background: rgb(1, 77, 69);
+    /* background: rgb(0, 56, 50); */
 }
 
 #home .homeimage{
@@ -216,7 +222,7 @@ body .App.dark #home{
     /* content: ""; */
     width: 550px;
     height: 550px;
-    position: absolute;
+    position: fixed;
     border-radius: 50%;
     background: rgba(42, 153, 201, 0.434);
     z-index: -1;
@@ -229,13 +235,26 @@ body .App.dark #home{
     /* content: ""; */
     width: 250px;
     height: 250px;
-    position: absolute;
+    position: fixed;
     border-radius: 50%;
     background: rgba(42, 153, 201, 0.434);
     z-index: -1;
     top: -15rem;
     right: 0rem;
     animation: circle ease-in-out 5s infinite alternate-reverse;
+}
+
+#home .div3{
+    /* content: ""; */
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    border-radius: 50%;
+    background: rgba(161, 74, 204, 0.701);
+    z-index: -1;
+    bottom: 5rem;
+    right: 2rem;
+    animation: circle ease-in-out 6s infinite alternate-reverse;
 }
 
  .dark #home .div2,.dark #home .div1{
@@ -251,7 +270,7 @@ body .App.dark #home{
 #home h1{
     font-size: 3.3rem;
     color: gray;
-    font-weight: 300;
+    font-weight: 800;
     margin-bottom: .75rem;
 }
 
@@ -273,7 +292,7 @@ body .App.dark #home h1,body .App.dark #home p{
 }
 
 body .App.dark #home h3{
-    color: #a14acc;
+    color: #64307e;
 }
 
 #home .button{
