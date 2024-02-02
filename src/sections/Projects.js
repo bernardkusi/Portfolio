@@ -16,22 +16,21 @@ const Projects = ({ dark }) => {
     return (
         <div id="projects">
             <p className="heading">View My Projects</p>
-            <p className="skillhead">Web development</p>
-            <div className="projects_grid">
-                {projects.map((project, index) => {
-                    return (
-                        <Project dark={dark} key={index} project={project}>
-                            <img src={require(`../${project.image}`)} alt={project.name} />
-                        </Project>)
-                })}
-
-            </div>
-
             <p className="skillhead">Ui/Ux Design projects</p>
             <div className="figmagrid">
+                <a href="https://www.figma.com/file/rp4oDJ7XWsH5z50KwSACUd/Untitled?type=design&node-id=78%3A155&mode=design&t=ED5ffz9ly78tGBhe-1" target="_blank" rel="noopener noreferrer">
+                    <div className="image">
+                        <img src={require(`../images/florel.jpg`)} alt="florel" />
+                    </div>
+                </a>
+                <a href="https://www.figma.com/file/EeTZQiqhsiJ6OanfDcDcwh/Untitled?type=design&node-id=23%3A181&mode=design&t=7UvN6V9GLeIDSmzl-1" target="_blank" rel="noopener noreferrer">
+                    <div className="image">
+                        <img src={require(`../images/herbashop.jpg`)} alt="herbashop" />
+                    </div>
+                </a>
                 <a href="https://www.figma.com/file/Te914L3OTQXb2E9JQtK1zV/Untitled?type=design&node-id=65%3A157&mode=design&t=DdfKnhW8It0BPdvz-1" target="_blank" rel="noopener noreferrer">
                     <div className="image">
-                        <img src={require(`../images/furnichar.png`)} alt="falaa" />
+                        <img src={require(`../images/furnichar.jpg`)} alt="furnichar" />
                     </div>
                 </a>
                 <a href="https://www.figma.com/file/FxLv42zdfZ3pcXEy4rUykK/Untitled?type=design&mode=design&t=lBBXY0Twbor8ipBF-1" target="_blank" rel="noopener noreferrer">
@@ -63,6 +62,17 @@ const Projects = ({ dark }) => {
                         <img src={require(`../images/sweetmeals (2).png`)} alt="sweetmeals" />
                     </div>
                 </a>
+            </div>
+
+            <p className="skillhead">Web development</p>
+            <div className="projects_grid">
+                {projects.map((project, index) => {
+                    return (
+                        <Project dark={dark} key={index} project={project}>
+                            <img src={require(`../${project.image}`)} alt={project.name} />
+                        </Project>)
+                })}
+
             </div>
         </div>
     )
